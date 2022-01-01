@@ -1,0 +1,19 @@
+<div class="card" (click)="goToCompanyDetail()">
+  <table style="vertical-align: middle">
+    <tr>
+      <td class="form" style="vertical-align: middle">
+        <img src="{{companyItem.logo}}" style="height:100%; width: 80%" alt=""/>
+      </td>
+      <td class="name" style="vertical-align: middle">
+        <p>{{companyItem.suffix}} "{{companyItem.business_name}}"</p>
+      </td>
+      <td style="vertical-align: middle">
+        <ul style="vertical-align: middle">
+          <li><strong>Industry:</strong>{{companyItem.industry}}</li>
+          <li><strong>Type:</strong>{{companyItem.type}}</li>
+        </ul>
+      </td>
+    </tr>
+  </table>
+</div>
+

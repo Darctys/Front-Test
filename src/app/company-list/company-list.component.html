@@ -1,0 +1,9 @@
+
+<form class="company-list">
+  <app-company-sort></app-company-sort>
+  <app-company-filter></app-company-filter>
+  <div *ngFor="let company of companiesList" class="list">
+    <app-company-item [companyItem]="company"></app-company-item>
+  </div>
+</form>
+

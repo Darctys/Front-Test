@@ -1,0 +1,8 @@
+<form [formGroup]="sortForm" class="sort">
+  <select [formControlName]="'sortType'" (change)="sortList()" >
+    <option [value]="''" disabled selected>Sort of</option>
+    <option [value]="'business_name'">Sort of name</option>
+    <option [value]="'industry'">Sort of industry</option>
+    <option [value]="'type'">Sort of type</option>
+  </select>
+</form>

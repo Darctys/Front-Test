@@ -1,0 +1,21 @@
+<form [formGroup]="filterForm">
+  <div class="filter">
+    <p>input name:</p>
+    <input placeholder="name" [formControlName]="'name'" (input)="listFilter()">
+  </div>
+  <div class="filter">
+    <p>choose type:</p>
+    <select [formControlName]="'type'" (change)="listFilter()">
+      <option></option>
+      <option *ngFor="let type of listTypes" [value]="type">{{type}}</option>
+    </select>
+  </div>
+  <div class="filter">
+    <p>choose industry:</p>
+    <select [formControlName]="'industry'" (change)="listFilter()">
+      <option></option>
+      <option *ngFor="let industry of listIndustries" [value]="industry">{{industry}}</option>
+    </select>
+  </div>
+</form>
+
