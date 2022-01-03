@@ -22,8 +22,8 @@ export class CompanyFilterComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    this.listIndustries=this.companyService.getCompaniesIndustries();
-    this.listTypes=this.companyService.getCompaniesTypes();
+    this.listIndustries=this.companyService.CompaniesIndustries;
+    this.listTypes=this.companyService.CompaniesTypes;
   }
   public listFilter(){
     const name: string = this.filterForm.get('name')?.value;

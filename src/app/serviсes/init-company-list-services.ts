@@ -8,12 +8,12 @@ import {BehaviorSubject} from "rxjs";
 
 @Injectable()
 export class initCompanyListServices {
-  companyList!: ICompanyInfoFull[];
+  public companyList!: ICompanyInfoFull[];
   private resList!: ICompanyInfoFull[];
   public subject: BehaviorSubject<ICompanyInfoFull[]> = new BehaviorSubject<ICompanyInfoFull[]>([])
   private sortKey: sortItems = '';
-  public listIndustries: Set<string> = new Set<string>();
-  public listTypes: Set<string> = new Set<string>();
+  private listIndustries: Set<string> = new Set<string>();
+  private listTypes: Set<string> = new Set<string>();
   constructor(private companies: HttpService){
     this.companies.getCompanies().subscribe((x: ICompanyInfoFull[]) => this.initialise(x))
   }
@@ -46,11 +46,11 @@ export class initCompanyListServices {
     this.sortList(this.sortKey);
   }
 
-  public getCompaniesTypes(){
+  public get CompaniesTypes(): Set<string>{
     return this.listTypes;
   }
 
-  public getCompaniesIndustries(){
+  public get CompaniesIndustries() : Set<string>{
     return this.listIndustries;
   }
 
